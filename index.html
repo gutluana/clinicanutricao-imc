@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Clinica de Nutrição</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    
+    <form id="clinica">
+        <fieldset class="grupo">
+            <h1>Clinica de Nutrição</h1>
+            <div class="campo">
+                <label for="nome"><strong>Nome:</strong></label>
+                <input type="text" name="nome" id="nome" required><br><br>
+
+                <label for="peso"><strong>Peso:</strong></label>
+                <input type="text" name="peso" id="peso" required>
+
+                <label for="altura"><strong>Altura:</strong></label>
+                <input type="text" name="altura" id="altura" required>
+
+                <label for="gordura"><strong>%Gordura:</strong></label>
+                <input type="text" name="gordura" id="gordura" required><br><br>
+
+                <button type="button" onclick="adicionar()">Adicionar</button>
+            </div>
+        </fieldset>   
+    </form>
+    <h2>Meus pacientes</h2>
+    <table id="paciente" border="1">
+        <tr>
+            <th>Nome</th>
+            <th>Peso</th>
+            <th>Altura</th>
+            <th>% gordura</th>
+            <th>IMC</th>
+        </tr>
+    </table>
+     <script src="js/main.js"></script>
+</body>
+</html>
