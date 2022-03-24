@@ -1,0 +1,12 @@
+h1{
+    color: darkgoldenrod;
+}
+
+table{
+    width: 50%;
+}
+
+.grupo{
+    width: 60%;
+}
+
