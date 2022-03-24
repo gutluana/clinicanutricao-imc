@@ -1,0 +1,47 @@
+function adicionar(){
+    
+    var nome = document.getElementById('nome').value;//pegar do form
+    var nome= (nome); 
+
+    var peso= document.getElementById('peso').value;//pegar do form
+    var peso= (peso);
+
+    var altura= document.getElementById('altura').value;//pegar do form
+    var altura= (altura); 
+
+    var gordura= document.getElementById('gordura').value;//pegar do form
+    var gordura= (gordura);
+
+
+// DOM para criar 
+  linha=document.createElement("tr");//<tr></tr> criando uma linha
+  celula1 = document.createElement("td"); //<td></td>//criando uma celula
+  celula1.textContent=(nome);
+
+  celula2 = document.createElement("td"); //<td></td>
+  celula2.textContent=(peso);
+  
+  celula3 = document.createElement("td"); //<td></td>
+  celula3.textContent=(altura);
+
+  celula4 = document.createElement("td"); //<td></td>
+  celula4.textContent=(gordura);
+
+  celula5 = document.createElement("td"); //<td></td>
+  celula5.textContent=imc(peso, altura);
+  
+  linha.appendChild(celula1); //adicionando células a linha
+  linha.appendChild(celula2);
+  linha.appendChild(celula3);
+  linha.appendChild(celula4);
+  linha.appendChild(celula5);
+  tabela=document.getElementById("paciente").appendChild(linha);//add linha na tabela
+
+}
+
+function imc(peso, altura){
+     altura = altura / 100;
+     return Math.round((peso / (altura * altura)));
+
+
+}
